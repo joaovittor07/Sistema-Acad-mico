@@ -1,0 +1,74 @@
+package SistemaAcadêmico;
+
+import java.util.ArrayList;
+
+public class Disciplina {
+	
+	private String NomeDisciplina;
+	
+	private Fase Fase;
+	
+	private ArrayList<Professor> Professores;
+	
+	private ArrayList<Aluno> Alunos;
+
+	public Disciplina() {
+		Alunos = new ArrayList<Aluno>();
+		Professores = new ArrayList<Professor>();
+	}
+
+	public Disciplina(String nomeDisciplina, Fase fase) {
+		Alunos = new ArrayList<Aluno>();
+		Professores = new ArrayList<Professor>();
+		NomeDisciplina = nomeDisciplina;
+		Fase = fase;
+	}
+
+	public ArrayList<Professor> getProfessores() {
+		return Professores;
+	}
+
+	public void setProfessores(ArrayList<Professor> professores) {
+		Professores = professores;
+	}
+
+	public String getNomeDisciplina() {
+		return NomeDisciplina;
+	}
+
+	public void setNomeDisciplina(String nomeDisciplina) {
+		NomeDisciplina = nomeDisciplina;
+	}
+
+	public Fase getFase() {
+		return Fase;
+	}
+
+	public void setFase(Fase fase) {
+		Fase = fase;
+	}
+
+	public ArrayList<Aluno> getAlunos() {
+		return Alunos;
+	}
+
+	public void setAlunos(ArrayList<Aluno> alunos) {
+		Alunos = alunos;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Disciplina [NomeDisciplina=");
+		builder.append(NomeDisciplina);
+		builder.append(", Fase=");
+		builder.append(Fase);
+		builder.append(", Professores=");
+		builder.append(Professores);
+		builder.append(", Alunos=");
+		builder.append(Alunos);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+}
