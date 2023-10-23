@@ -1,0 +1,61 @@
+package SistemaAcadêmico;
+
+import java.util.ArrayList;
+
+public class Curso {
+	
+	private String NomeCurso;
+	
+	private String Instituicao;
+
+	private ArrayList<Aluno> Alunos;
+
+	public Curso() {
+		Alunos = new ArrayList<Aluno>();
+	}
+
+	public Curso(String nomeCurso, String instituicao) {
+		Alunos = new ArrayList<Aluno>();
+		NomeCurso = nomeCurso;
+		Instituicao = instituicao;
+	}
+
+	public String getNomeCurso() {
+		return NomeCurso;
+	}
+
+	public void setNomeCurso(String nomeCurso) {
+		NomeCurso = nomeCurso;
+	}
+
+	public String getInstituicao() {
+		return Instituicao;
+	}
+
+	public void setInstituicao(String instituicao) {
+		Instituicao = instituicao;
+	}
+
+	public ArrayList<Aluno> getAlunos() {
+		return Alunos;
+	}
+
+	public void setAlunos(ArrayList<Aluno> alunos) {
+		Alunos = alunos;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Curso [NomeCurso=");
+		builder.append(NomeCurso);
+		builder.append(", Instituicao=");
+		builder.append(Instituicao);
+		builder.append(", Alunos=");
+		builder.append(Alunos);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+}
