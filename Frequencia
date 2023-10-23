@@ -1,0 +1,88 @@
+package SistemaAcadêmico;
+
+import java.time.LocalDate;
+
+public class Frequencia {
+	
+	private int Frequencia;
+	
+	private LocalDate Data;
+	
+	private Disciplina Disciplina;
+	
+	private Aluno Aluno;
+	
+	private Professor Professor;
+
+	public Frequencia() {
+		
+	}
+
+	public Frequencia(int frequencia, LocalDate data, Disciplina disciplina,
+			Aluno aluno, Professor professor) {
+
+		Frequencia = frequencia;
+		Data = data;
+		Disciplina = disciplina;
+		Aluno = aluno;
+		Professor = professor;
+	}
+
+	public int getFrequencia() {
+		return Frequencia;
+	}
+
+	public void setFrequencia(int frequencia) {
+		Frequencia = frequencia;
+	}
+
+	public LocalDate getData() {
+		return Data;
+	}
+
+	public void setData(LocalDate data) {
+		Data = data;
+	}
+
+	public Disciplina getDisciplina() {
+		return Disciplina;
+	}
+
+	public void setDisciplina(Disciplina disciplina) {
+		Disciplina = disciplina;
+	}
+
+	public Aluno getAluno() {
+		return Aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		Aluno = aluno;
+	}
+
+	public Professor getProfessor() {
+		return Professor;
+	}
+
+	public void setProfessor(Professor professor) {
+		Professor = professor;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Frequencia [Frequencia=");
+		builder.append(Frequencia);
+		builder.append(", Data=");
+		builder.append(Data);
+		builder.append(", Disciplina=");
+		builder.append(Disciplina.getNomeDisciplina());
+		builder.append(", Aluno=");
+		builder.append(Aluno.getNome());
+		builder.append(", Professor=");
+		builder.append(Professor.getNome());
+		builder.append("]");
+		return builder.toString();
+	}
+
+}
