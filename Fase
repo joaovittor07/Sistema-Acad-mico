@@ -1,0 +1,58 @@
+package SistemaAcadêmico;
+
+public class Fase {
+	
+	private int NumeroFase;
+	
+	private int QuantidadeDisciplina;
+	
+	private Curso Curso;
+
+	public Fase() {
+		
+	}
+
+	public Fase(int numeroFase, int quantidadeDisciplina, Curso curso) {
+		NumeroFase = numeroFase;
+		QuantidadeDisciplina = quantidadeDisciplina;
+		Curso = curso;
+	}
+
+	public int getNumeroFase() {
+		return NumeroFase;
+	}
+
+	public void setNumeroFase(int numeroFase) {
+		NumeroFase = numeroFase;
+	}
+
+	public int getQuantidadeDisciplina() {
+		return QuantidadeDisciplina;
+	}
+
+	public void setQuantidadeDisciplina(int quantidadeDisciplina) {
+		QuantidadeDisciplina = quantidadeDisciplina;
+	}
+
+	public Curso getCurso() {
+		return Curso;
+	}
+
+	public void setCurso(Curso curso) {
+		Curso = curso;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Fase [NumeroFase=");
+		builder.append(NumeroFase);
+		builder.append(", QuantidadeDisciplina=");
+		builder.append(QuantidadeDisciplina);
+		builder.append(", Curso=");
+		builder.append(Curso.getNomeCurso());
+		builder.append("]");
+		return builder.toString();
+	}
+
+}
