@@ -1,0 +1,52 @@
+package SistemaAcadêmico;
+
+import java.time.LocalDate;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Aluno a = new Aluno();
+		a.setNome("Julio");
+		a.setIdade(22);
+		a.setSexo("Masculino");
+		a.setMatricula(123);
+		System.out.println(a);
+		
+		Professor p = new Professor();
+		p.setNome("João");
+		p.setIdade(21);
+		p.setSexo("Masculino");
+		p.setQuantidadeAula(123);
+		System.out.println(p);
+		
+		Curso c = new Curso();
+		c.setInstituicao("IFC");
+		c.setNomeCurso("BCC");
+		c.getAlunos().add(a);
+		System.out.println(c);
+		
+		Fase f = new Fase();
+		f.setNumeroFase(6);
+		f.setQuantidadeDisciplina(7);
+		f.setCurso(c);
+		System.out.println(f);
+		
+		Disciplina d = new Disciplina();
+		d.setNomeDisciplina("POO");
+		d.setFase(f);
+		d.getAlunos().add(a);
+		d.getProfessores().add(p);
+		System.out.println(d);
+		
+		Frequencia fr = new Frequencia();
+		fr.setData(LocalDate.now());
+		fr.setFrequencia(75);
+		fr.setAluno(a);
+		fr.setProfessor(p);
+		fr.setDisciplina(d);
+		System.out.println(fr);
+		
+	}
+
+}
